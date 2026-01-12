@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: mvc-demo
+    version: 1.0.0
+
+server:
+  port: 9999
