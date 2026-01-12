@@ -10,7 +10,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/unlimitedxm94/jenkins_demo.git'
+                git branch: 'main', url: 'https://github.com/unlimitedxm94/jenkins_demo.git'
             }
         }
 
