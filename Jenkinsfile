@@ -15,7 +15,7 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
+            steps('simpleweb') {
                 sh 'mvn clean package -DskipTests'
             }
         }
