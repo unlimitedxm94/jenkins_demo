@@ -21,12 +21,17 @@ pipeline {
                 }
             }
         }
-
-        stage('Test') {
+        
+        stage('Run') {
             steps {
-                sh 'mvn test'
+                dir('simpleweb') {
+                    // 后台运行 JAR
+                    sh 'nohup java -jar target/simpleweb-0.0.1-SNAPSHOT.jar > app.log 2>&1 &'
+                }
             }
         }
+
+
     }
 
     post {
